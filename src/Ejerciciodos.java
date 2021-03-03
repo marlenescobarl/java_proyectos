@@ -105,23 +105,40 @@ public class Ejerciciodos
                     }
                     break;
                 case 4:
-                    System.out.println("Ingrese una frase");
+                    int espacios = 2;
+                    System.out.println("Ingrese una frase para comparar su tamnno con o sin espacios");
                     Scanner fras = new Scanner(System.in);
                     String frase = fras.nextLine();
-                    System.out.println("Desea ignorar espacios SI (1) NO (2)");
+                    System.out.println("Desea ignorar espacios");
+                    System.out.println("1. SI");
+                    System.out.println("2. NO");
                     Scanner espace = new Scanner(System.in);
-                    int espacios = espace.nextInt();
+                    espacios = espace.nextInt();
+
+                    switch (espacios)
+                    {
+                        case 1:
+                            int tamano_frase = frase.length();
+                            System.out.println("Frase: " + frase + " tamanno: " + tamano_frase);
+                            break;
+                        case 2:
+                            frase = frase.replaceAll("\\s","");
+                            System.out.println("Frase: " + frase + " tamanno: " + frase.length());
+                            break;
+                        default:
+                            System.out.println("Debe ingresar 1 para SI y 2 para NO");
+                            break;
+                    }
 
                     /*
+
 
                     if(espacios == 1)
                     {
                         int tamano_frase = frase.length();
                         System.out.println("Frase: " + frase + " tamanno: " + tamano_frase);
-                    }else {
-                        System.out.println("Debe ingresar 1 para SI y 2 para NO");
                     }
-                    if(espacios == 2)
+                    else if(espacios == 2)
                     {
                         //para ignorar los espacios se tiene que trabajar con la misma variable
                         //haciendo uso de las expresiones regulares
@@ -132,6 +149,7 @@ public class Ejerciciodos
                         System.out.println("Debe ingresar 1 para SI y 2 para NO");
                     }
                     */
+
                     break;
                 case 5:
                     salir = true;
