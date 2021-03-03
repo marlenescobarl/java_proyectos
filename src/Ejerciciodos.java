@@ -3,7 +3,7 @@ public class Ejerciciodos
 {
     public static void main(String[] args)
     {
-        Scanner en = new Scanner(System.in);
+        Scanner opcion = new Scanner(System.in);
         //declaracion de variables
         int op = 6, tamano = 0, desde = 0, hasta = 0, noign = 2, ignorar = 1;
         String sub = "", cadena = "", palabra1 ="", palabra2 = "";
@@ -17,14 +17,15 @@ public class Ejerciciodos
             System.out.println("2. Mostrar una subcadena");
             System.out.println("3. Comparacion de palabras");
             System.out.println("4. Comparacion de tamanno");
-            op = en.nextInt();
+            op = opcion.nextInt();
 
             //menu
             switch (op)
             {
                 case 1:
                     System.out.println("Ingrese una cadena de texto");
-                    cadena = en.nextLine();
+                    Scanner texto = new Scanner(System.in);
+                    cadena = texto.nextLine();
                     tamano = cadena.length();
                     System.out.print("El tamaño de la cadena es: " + tamano);
                     break;
@@ -32,9 +33,11 @@ public class Ejerciciodos
                     System.out.println("Cadena original");
                     System.out.println(cadena);
                     System.out.println("Desde donde desea optener la nueva cadena");
-                    desde = en.nextInt();
+                    Scanner des = new Scanner(System.in);
+                    desde = des.nextInt();
                     System.out.println("Hasta donde desea optener la nueva cadena");
-                    hasta = en.nextInt();
+                    Scanner has = new Scanner(System.in);
+                    hasta = has.nextInt();
                     if(hasta <= tamano)
                     {
                         sub = cadena.substring(desde,hasta);
@@ -48,9 +51,11 @@ public class Ejerciciodos
                     break;
                 case 3:
                     System.out.println("Ingrese la primera palabra");
-                    palabra1 = en.nextLine();
+                    Scanner pri = new Scanner(System.in);
+                    palabra1 = pri.nextLine();
                     System.out.println("Ingrese la segunda palabra");
-                    palabra2 = en.nextLine();
+                    Scanner seg = new Scanner(System.in);
+                    palabra2 = seg.nextLine();
 
                     break;
                 case 4:
