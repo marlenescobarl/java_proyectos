@@ -5,7 +5,7 @@ public class Ejerciciodos
     {
         Scanner opcion = new Scanner(System.in);
         //declaracion de variables
-        int op = 6, tamano = 0, desde = 0, hasta = 0, noign = 2, ignorar = 1;
+        int op = 6, tamano = 0, desde = 0, hasta = 0;
         String sub = "", cadena = "", palabra1 ="", palabra2 = "";
         boolean salir = false;
 
@@ -27,6 +27,7 @@ public class Ejerciciodos
                     Scanner texto = new Scanner(System.in);
                     cadena = texto.nextLine();
                     tamano = cadena.length();
+                    System.out.println("");
                     System.out.print("El tamaño de la cadena es: " + tamano);
                     break;
                 case 2:
@@ -50,12 +51,42 @@ public class Ejerciciodos
 
                     break;
                 case 3:
+                    int ignorar = 2;
                     System.out.println("Ingrese la primera palabra");
                     Scanner pri = new Scanner(System.in);
                     palabra1 = pri.nextLine();
                     System.out.println("Ingrese la segunda palabra");
                     Scanner seg = new Scanner(System.in);
                     palabra2 = seg.nextLine();
+                    System.out.println("");
+                    System.out.println("Desea ignorar mayusculas");
+                    System.out.println("1. SI");
+                    System.out.println("2. NO");
+                    Scanner ignor = new Scanner(System.in);
+                    ignorar = ignor.nextInt();
+                    switch (ignorar)
+                    {
+                        case 1:
+                            if(palabra1.equals(palabra2))
+                            {
+                                System.out.println("Las palabras ingresadas son iguales");
+                            } else {
+                                System.out.println("las palabras ingresadas son diferentes");
+                            }
+                            break;
+                        case 2:
+                            if(palabra1.equalsIgnoreCase(palabra2))
+                            {
+                                System.out.println("Las palabras ingresadas son iguales");
+                            } else {
+                                System.out.println("las palabras ingresadas son diferentes");
+                            }
+
+                            break;
+                        default:
+                            System.out.println("Debe ingresar 1 para SI y 2 para NO");
+                            break;
+                    }
 
                     break;
                 case 4:
