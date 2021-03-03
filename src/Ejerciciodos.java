@@ -1,33 +1,50 @@
-import java.util.*;
+import java.util.Scanner;
 public class Ejerciciodos
 {
     public static void main(String[] args)
     {
-        Scanner go = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         //declaracion de variables
-        int op = 4, numc = 0;
-        String cado = "", sub = "";
+        int op = 6;
+        String sub = "";
+        boolean salir = false;
 
-        System.out.println("    Que operacion desea");
-        System.out.println("");
-        System.out.println("1. Mostrar el tamanno de la cadena");
-        System.out.println("2. Mostrar una subcadena");
-        System.out.println("3. Comparacion de palabras");
-        System.out.println("4. Comparacion de tamanno");
-        op = go.nextInt();
 
-        //menu principal
-        switch (op)
+
+        while (!salir)
         {
-            case 1: System.out.println("Ingrese la cadena de texto");
-                    cado = go.nextLine();
+            System.out.println("    Elija una opcion");
+            System.out.println("");
+            System.out.println("1. Mostrar el tamanno de la cadena");
+            System.out.println("2. Mostrar una subcadena");
+            System.out.println("3. Comparacion de palabras");
+            System.out.println("4. Comparacion de tamanno");
+            op = entrada.nextInt();
 
-                    numc = cado.length();
-                    System.out.print("El tamanno de la cadena es: " + numc);
+            //menu
+            switch (op)
+            {
+                case 1:
                     break;
-            case 2:
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    break;
+
+            }
 
         }
+
+
+
 
     }
 }
