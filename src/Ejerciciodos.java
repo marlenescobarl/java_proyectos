@@ -5,8 +5,8 @@ public class Ejerciciodos
     {
         Scanner en = new Scanner(System.in);
         //declaracion de variables
-        int op = 6, tamano = 0, desde = 0, hasta = 0;
-        String sub = "", cadena = "";
+        int op = 6, tamano = 0, desde = 0, hasta = 0, noign = 2, ignorar = 1;
+        String sub = "", cadena = "", palabra1 ="", palabra2 = "";
         boolean salir = false;
 
         while (!salir)
@@ -47,6 +47,11 @@ public class Ejerciciodos
 
                     break;
                 case 3:
+                    System.out.println("Ingrese la primera palabra");
+                    palabra1 = en.nextLine();
+                    System.out.println("Ingrese la segunda palabra");
+                    palabra2 = en.nextLine();
+
                     break;
                 case 4:
                     break;
