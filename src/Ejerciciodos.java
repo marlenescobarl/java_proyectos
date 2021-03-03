@@ -64,6 +64,10 @@ public class Ejerciciodos
                     System.out.println("2. NO");
                     Scanner ignor = new Scanner(System.in);
                     ignorar = ignor.nextInt();
+
+                    /*creacion de un switch case para observar su funcionamiento
+                    en comparacion de una condicion if
+                     */
                     switch (ignorar)
                     {
                         case 1:
@@ -87,24 +91,39 @@ public class Ejerciciodos
                             System.out.println("Debe ingresar 1 para SI y 2 para NO");
                             break;
                     }
-
                     break;
                 case 4:
+                    System.out.println("Ingrese una frase");
+                    Scanner fras = new Scanner(System.in);
+                    String frase = fras.nextLine();
+                    System.out.println("Desea ignorar espacios");
+                    Scanner espace = new Scanner(System.in);
+                    int espacios = espace.nextInt();
+                    if(espacios == 1)
+                    {
+                        int tamano_frase = frase.length();
+                        System.out.println("Frase: " + frase + " tamanno: " + tamano_frase);
+                    }else if(espacios == 2)
+                    {
+                        /* para ignorar los espacios se tiene que trabajar con la misma variable
+                        haciendo uso de las expresiones regulares
+                         */
+                        frase = frase.replaceAll("\\s","");
+                        System.out.println("Frase: " + frase + " tamanno: " + frase.length());
+
+                    }
+
                     break;
                 case 5:
-                    break;
-                case 6:
+                    salir = true;
                     break;
                 default:
+                    System.out.println("La opcion igresada no es valida");
                     break;
 
             }
 
         }
-
-
-
-
 
     }
 }
